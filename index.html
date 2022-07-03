@@ -4,206 +4,243 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <title>Anastasiia Sviridenko</title>
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
-    <title>Anastasiia Sviridenko</title>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("H8pfVjcPqGs4LTcH_");
+   })();
+</script>
   </head>
   <body>
-    <section id="about-me">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
-        <div class="personal__logo">Anastasiia Sviridenko</div>
+        <figure>
+          <img
+            id="personal-logo"
+            src="./assets/myLogos/AS-logos_white.png"
+            alt=""
+          />
+        </figure>
         <ul class="nav__link--list">
-          <li class = "nav__link">
+          <li class="nav__link" onclick="toggleModal()" >
             <a
-              href="#languages"
-              class="
-                nav__link--anchor
-                link__hover-effect link__hover-effect--black
-              "
-              >Languages</a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
             >
           </li>
-          <li class = "nav__link">
+          <li class="nav__link">
             <a
               href="#projects"
-              class="
-                nav__link--anchor
-                link__hover-effect link__hover-effect--black
-              "
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class = "nav__link">
-            <a href="mailto:stasiasviridenko@gmail.com" class="nav__link--anchor nav__link--anchor-primary"
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fas fa-adjust"></i
+            ></a>
+          </li>
         </ul>
       </nav>
-      <div class="flex flex-1">
-        <div class="about-me__info row">
-          <div class="about-me__info--container">
-            <figure class="about-me__picture--mask">
+      <header class="header">
+        <div class="header__content">
+          <h3 class="title h2">Hi! My name is</h3>
+          <h1 class="title orange">Anastasiia Sviridenko</h1> 
+          <p class="header__para">
+            I'm a <b class="orange"> full-stack software engineer</b> specializing in building apps for the web and creating exceptional digital experiences.
+            <br/>
+            Here's a bit more <b class="orange click link__hover-effect link__hover-effect--black" onclick="toggleModal()">about me</b>.
+          </p>
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/anastasiia-sviridenko/"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/asvirid"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="./assets/resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 22 year-old
+            <b class="orange">frontend software developer</b> with a strong
+            passion for great user expereience.
+            <br />
+            Here I am selling myself more. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Saepe, obcaecati commodi? Velit
+            voluptatibus, asperiores cupiditate molestias aliquid tempore
+            
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
               <img
-                src="./assets/me.jpeg"
-                class="about-me__picture"
-                alt="Picture of me!"
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
               />
-            </figure>
-            <h1 class="about-me__info--title">
-              Hey! I am <span class="text--purple"> Anastasiia</span>&nbsp;<span class="wave">👋</span>
-            </h1>
-            <p class="about-me__info--para">
-              I'm a
-              <strong class="text--purple">front-end software engineer</strong>
-              with a strong passion for technology innovation and human-centered
-              design which I aspire to implement to lead next big tech product
-              launches! I am currently a senior pursuing a dual degree in
-              Computer Science and Business Management & Information Systems
-              from Boston University.
-            </p>
-            <div class="about-me__links">
-              <a href="https://www.linkedin.com/in/anastasiia-sviridenko/" target = "_blank" class="about-me__link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="https://github.com/asvirid" target= "_blank" class="about-me__link"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a href="mailto:stasiasviridenko@gmail.com" class="about-me__link"
-                ><i class="far fa-envelope"></i
-              ></a>
-              <a href="./assets/resume.pdf" target="_blank" class="about-me__link"
-                ><i class="fas fa-file-pdf"></i
-              ></a>
-            </div>
-          </div>
-          <figure class="about-me__img--container">
-            <img
-              src="./assets/undraw_websites.svg"
-              class="about-me__img"
-              alt=""
-            />
-          </figure>
-        </div>
-      </div>
-    </section>
-    <section id="languages">
-      <div class="container">
-        <div class="row">
-          <h1 class="section__title">
-            This is my <span class="text--purple"> technology stack</span>
-          </h1>
-          <div class="language__list">
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-                  alt="HTML logo"
-                  class="language__img"
-                />
-              </figure>
               <span class="language__name">HTML</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
-                  alt="CSS Logo"
-                  class="language__img"
-                />
-              </figure>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
               <span class="language__name">CSS</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
-                  alt="JS logo"
-                  class="language__img"
-                />
-              </figure>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
               <span class="language__name">JavaScript</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
-                  alt="React logo"
-                  class="language__img"
-                />
-              </figure>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
               <span class="language__name">React</span>
-            </div>
-           <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png"
-                  alt="Vue logo"
-                  class="language__img"
-                />
-              </figure>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png"
+                alt=""
+              />
               <span class="language__name">Vue</span>
-            </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="./assets/logos/pylogo.png"
-                  alt="Python logo"
-                  class="language__img"
-                />
-              </figure>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="./assets/pylogo.png"
+                alt=""
+              />
               <span class="language__name">Python</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Lets have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" class="input" name="user_name" required />
             </div>
-            <div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="./assets/logos/c-logo.png"
-                  alt="C++ logo"
-                  class="language__img"
-                />
-              </figure>
-              <span class="language__name">C++</span>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input type="email" class="input" name="user_email" required />
             </div>
-            <!--<div class="language">
-              <figure class="language__img--wrapper">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-                  alt="HTML logo"
-                  class="language__img"
-                />
-              </figure>
-              <span class="language__name">HTML</span> -->
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea type="text" class="input" name="message" required></textarea> </textarea>
             </div>
+            <button id = "contact__submit" class="form__submit">Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+              <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+              Thanks for the message! Looking forward to speaking to you soon.
           </div>
         </div>
       </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
+      <img src="./assets/circle.svg" class="shape shape--1" alt="">
+      <img src="./assets/squiggly.svg" class="shape shape--2" alt="">
+      <img src="./assets/circle.svg" class="shape shape--3" alt="">
+      <img src="./assets/triangle.svg" class="shape shape--4" alt="">
+      <img src="./assets/circle.svg" class="shape shape--5" alt="">
+      <img src="./assets/squiggly.svg" class="shape shape--6" alt="">
+      <img src="./assets/circle.svg" class="shape shape--7" alt="">
+      <img src="./assets/semi circle.svg" class="shape shape--8" alt="">
     </section>
-
     <section id="projects">
       <div class="container">
         <div class="row">
-          <h1 class = "section-title">Here some of my <span class="text--purple">projects</span></h1>
-          <ul class="project__list">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">projects </span>
+          </h1>
+          <div class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/loopit.png" class = "project__img" alt="Car Subscribtion Project">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h3 class="project__description--title">Movies Api</h3>
                   <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript, Vue, Vuex
+                    Html, CSS, JavaScript, Vue, VueX
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in aliquam repellat aperiam? Expedita repudiandae et laboriosam earum perferendis at ipsam in quisquam deserunt! Voluptates, odio facere? Neque unde beatae accusantium expedita facilis quam eligendi maxime temporibus non minus nihil eius, aliquid quibusdam nobis nesciunt est alias debitis itaque ab?
+                    A web database of movies implemented with OMDB Api. Feat. sorting, search by keyword, genre, or title. 
                   </p>
                   <div class="project__description--links">
-                    <a href="githublink" target = "_blank" class = "project__description--link">
-                      <i class = "fab fa-github"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
                     </a>
-                    <a href="website" class = "project__description--link">
-                      <i class = "fas fa-link"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
                     </a>
                   </div>
                 </div>
@@ -211,21 +248,29 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/loopit.png" class = "project__img" alt="Car Subscribtion Project">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h3 class="project__description--title">Ecommerce App</h3>
                   <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript, Vue, Vuex
+                    Html, CSS, JavaScript, Vue, VueX
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in aliquam repellat aperiam? Expedita repudiandae et laboriosam earum perferendis at ipsam in quisquam deserunt! Voluptates, odio facere? Neque unde beatae accusantium expedita facilis quam eligendi maxime temporibus non minus nihil eius, aliquid quibusdam nobis nesciunt est alias debitis itaque ab?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consequatur cupiditate officia minima ducimus dolorem natus
+                    dolorum aliquid, omnis labore. Dicta ducimus harum quibusdam
+                    deserunt iure quos corporis odio perspiciatis aliquid?
                   </p>
                   <div class="project__description--links">
-                    <a href="githublink" target = "_blank" class = "project__description--link">
-                      <i class = "fab fa-github"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
                     </a>
-                    <a href="website" class = "project__description--link">
-                      <i class = "fas fa-link"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
                     </a>
                   </div>
                 </div>
@@ -233,50 +278,105 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/loopit.png" class = "project__img" alt="Car Subscribtion Project">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h3 class="project__description--title">Web Scraper</h3>
                   <h4 class="project__description--sub-title">
-                    HTML, CSS, JavaScript, Vue, Vuex
+                    Html, CSS, JavaScript, Vue, VueX
                   </h4>
                   <p class="project__description--para">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in aliquam repellat aperiam? Expedita repudiandae et laboriosam earum perferendis at ipsam in quisquam deserunt! Voluptates, odio facere? Neque unde beatae accusantium expedita facilis quam eligendi maxime temporibus non minus nihil eius, aliquid quibusdam nobis nesciunt est alias debitis itaque ab?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consequatur cupiditate officia minima ducimus dolorem natus
+                    dolorum aliquid, omnis labore. Dicta ducimus harum quibusdam
+                    deserunt iure quos corporis odio perspiciatis aliquid?
                   </p>
                   <div class="project__description--links">
-                    <a href="githublink" target = "_blank" class = "project__description--link">
-                      <i class = "fab fa-github"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
                     </a>
-                    <a href="website" class = "project__description--link">
-                      <i class = "fas fa-link"></i>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </li>
-          </ul>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sales Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, Vue, VueX
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consequatur cupiditate officia minima ducimus dolorem natus
+                    dolorum aliquid, omnis labore. Dicta ducimus harum quibusdam
+                    deserunt iure quos corporis odio perspiciatis aliquid?
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
         </div>
       </div>
     </section>
     <footer>
-      <div class="row footer__row">
-        <a href="#" class="footer__anchor">
-          <figure class="footer__logo"> 
-            <img src="./assets/logos/AS-logos/AS-logos_white.png" class = "footer__logo--img" alt="">
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img
+              class="footer__logo--img"
+              src="./assets/myLogos/AS-logos_white.png"
+              alt=""
+            />
           </figure>
-          <span class="footer__logo--popper">
-            Top
-            <i class="fas fa-arrow-up"></i>
-          </span>
-        </a>
-        <div class="footer__social--list">
-          <a href="https://github.com/asvirid" class="footer__social--link link__hover-effect link__hover-effect--white" target = "_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/anastasiia-sviridenko/" class="footer__social--link link__hover-effect link__hover-effect--white" target = "_blank">LinkedIn</a>
-          <a href="mailto:stasiasviridenko@gmail.com" class="footer__social--link link__hover-effect link__hover-effect--white" target = "_blank">Email</a>
-          <a href="./assets/resume.pdf" class="footer__social--link link__hover-effect link__hover-effect--white" target = "_blank" > Resume</a>
+          <div class="footer__social--list">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >LinkedIn</a
+            >
+            <a
+              href="#" onclick="toggleModal()"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Contact</a
+            >
+            <a
+              href="./assets/resume.pdf" target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">
+            Copyright © 2022 Anastasiia Sviridenko
+          </div>
         </div>
-        <div class="footer__copyright">Copyright © 2022 Anastasiia Sviridenko</div>
       </div>
     </footer>
-    
   </body>
 </html>
