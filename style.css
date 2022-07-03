@@ -106,9 +106,13 @@ textarea:focus {
 }
 
 .h2 {
+  color: #fff;
   font-family: Source Code Pro;
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
 }
 
 .link__hover-effect {
@@ -157,6 +161,7 @@ nav,
 }
 
 .light-theme .title,
+.light-theme .h2,
 .light-theme .section__title,
 .light-theme .section__sub-title,
 .light-theme .nav__link--anchor,
@@ -691,6 +696,10 @@ SHAPES
 @media (max-width: 768px) {
   .title {
     font-size: 64px;
+  }
+
+  .h2 {
+    font-size: 16px;
   }
   .header__para {
     font-size: 16px;
