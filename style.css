@@ -30,7 +30,7 @@ button {
 }
 
 section {
-  background-color: #192442;
+  background-color: #07142b;
   transition: all 300ms ease;
   z-index: 100;
 }
@@ -95,18 +95,22 @@ textarea:focus {
 
 .title {
   color: #fff;
-  font-size: 58px;
+  font-size: 46px;
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
 }
 
+.orange__title {
+  color: #e7f8ead3;
+}
 .orange {
-  color: #f2735b;
+  color: #1ec987de;
+  font-family: Source Code Pro;
 }
 
 .h2 {
-  color: #fff;
+  color: #1ec988;
   font-family: Source Code Pro;
   font-size: 16px;
   font-weight: 400;
@@ -166,7 +170,9 @@ nav,
 .light-theme .section__sub-title,
 .light-theme .nav__link--anchor,
 .light-theme .fa-adjust,
-.light-theme .header__para {
+.light-theme .header__para,
+.light-theme .footer__copyright,
+.light-theme .footer__social--link {
   color: #192442;
 }
 
@@ -190,6 +196,10 @@ nav,
   background-color: #192442;
   color: #fff;
 }
+
+.light-theme footer {
+  background-color: #f9f9f9;
+}
 /*
 
 NAVIGATION
@@ -206,7 +216,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 20px;
   height: 100px;
@@ -222,8 +232,9 @@ nav {
 
 .nav__link--anchor {
   text-decoration: none;
+  font-family: Source Code Pro;
   font-size: 16px;
-  color: rgb(245, 245, 245);
+  color: rgba(245, 245, 245, 0.819);
   font-weight: 700;
 }
 
@@ -253,10 +264,11 @@ LANDING PAGE
 
 .header__para {
   color: #fff;
-  font-size: 18px;
-  font-weight: 100;
+  font-family: Source Code Pro;
+  font-size: 16px;
+  font-weight: 120;
   line-height: 26px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0em;
   max-width: 550px;
 }
 
@@ -266,7 +278,7 @@ LANDING PAGE
 }
 
 .social__link {
-  background-color: #f2735b;
+  background-color: #1ec988;
   color: white;
   padding: 6px;
   width: 32px;
@@ -514,9 +526,10 @@ PROJECTS
 */
 
 .section__title {
-  color: rgb(245, 245, 245);
+  color: rgba(245, 245, 245, 0.821);
+  font-family: Source Code Pro;
   text-align: center;
-  font-size: 38px;
+  font-size: 32px;
   margin-bottom: 60px;
   position: relative;
   z-index: 100;
@@ -536,6 +549,8 @@ PROJECTS
 
 .project__img {
   width: 100%;
+  height: 300px;
+  opacity: 0.85;
   transition: transform 600ms ease;
 }
 
@@ -559,12 +574,14 @@ PROJECTS
 
 .project__description {
   position: absolute;
+  margin-top: 20px;
+  margin-bottom: 20px;
   top: 50%;
   left: 90px;
   transform: translateY(100%);
   opacity: 0;
   transition: opacity 300ms, transform 450ms ease;
-  color: white;
+  color: #e7f8ead3;
   max-width: 380px;
 }
 
@@ -584,7 +601,7 @@ PROJECTS
 }
 
 .project__description--title {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .project__description--sub-title {
@@ -598,8 +615,10 @@ PROJECTS
   margin-right: 16px;
 }
 .project__description--para {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 280;
   margin: 5px 0;
+  padding-bottom: 10px;
 }
 
 /*
@@ -609,9 +628,9 @@ FOOTER
 */
 
 footer {
-  background-color: #242424;
+  background-color: #07142b;
   display: flex;
-  padding: 6% 0;
+  padding: 3% 0;
   position: relative;
   z-index: 100;
 }
@@ -635,6 +654,11 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+  font-family: Source Code Pro;
+}
+
+.footer__copyright {
+  font-size: 12px;
 }
 
 /*
@@ -702,7 +726,7 @@ SHAPES
     font-size: 16px;
   }
   .header__para {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .modal {

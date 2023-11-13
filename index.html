@@ -64,9 +64,10 @@
       <header class="header">
         <div class="header__content">
           <h2 class="h2">Hi! My name is</h2>
-          <h1 class="title orange">Anastasiia Sviridenko</h1> 
+          <h1 class="title orange__title">Anastasiia Sviridenko</h1> 
           <p class="header__para">
-            I'm a <b class="orange"> full-stack software engineer</b> specializing in building apps for the web and creating exceptional digital experiences.
+            I'm a <b class="orange">backend software engineer</b> specializing in building scalable, efficient, and reliable systems using Java, Kotlin, Python, and REST APIs. 
+            Experienced in designing and developing microservices and integrating with cloud platforms such as AWS and Azure. Strong understanding of data structures, algorithms, and artificial intelligence concepts. 
             <br/>
             Here's a bit more <b class="orange click link__hover-effect link__hover-effect--black" onclick="toggleModal()">about me</b>.
           </p>
@@ -222,15 +223,74 @@
             <li class="project">
               <div class="project__wrapper">
                 <img
-                  src="./assets/blinker mockup.png"
+                  src="./assets/projectsImages/disorders.png"
                   class="project__img"
                   alt=""
                 />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
-                  <h3 class="project__description--title">Movies Api</h3>
+                  <h3 class="project__description--title">Evaluating Physical Disorder in Cities</h3>
                   <h4 class="project__description--sub-title">
-                    Html, CSS, JavaScript, Vue, VueX
+                    Python, Html, GoogleMaps API, CNN
+                  </h4>
+                  <p class="project__description--para">
+                    Flask application for determining the vacancy of a lot given its 
+                    minimum and maximum latitude/longitude as input. The app processes the user input, 
+                    generates images of the lots utilizing Google Maps Static API, and then predicts the 
+                    vacancy of those lots via a Convolutional Neural Network.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://github.com/asvirid/CitiesPhysicalDisordersProject-" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/projectsImages/tweetstore.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Tweet Store</h3>
+                  <h4 class="project__description--sub-title">
+                    Python, HTML, SCSS, OAuth, Twitter API
+                  </h4>
+                  <p class="project__description--para">
+                    Tweet Store is a simple web app that pulls a public user's 
+                    tweets, analyzes it for common interests and will display a selection of stores 
+                    in your area based on results to start your gift shopping process for the Twitter User entered.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://github.com/asvirid/TweetStore" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/projectsImages/prodholod.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Corporate Website</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript
                   </h4>
                   <p class="project__description--para">
                     A web database of movies implemented with OMDB Api. Feat. sorting, search by keyword, genre, or title. 
@@ -239,7 +299,7 @@
                     <a href="#" class="project__description--link">
                       <i class="fab fa-github"></i>
                     </a>
-                    <a href="#" class="project__description--link">
+                    <a href="https://prod-holod.netlify.app/" target="_blank" class="project__description--link">
                       <i class="fas fa-link"></i>
                     </a>
                   </div>
@@ -249,67 +309,7 @@
             <li class="project">
               <div class="project__wrapper">
                 <img
-                  src="./assets/blinker mockup.png"
-                  class="project__img"
-                  alt=""
-                />
-                <div class="project__wrapper--bg"></div>
-                <div class="project__description">
-                  <h3 class="project__description--title">Ecommerce App</h3>
-                  <h4 class="project__description--sub-title">
-                    Html, CSS, JavaScript, Vue, VueX
-                  </h4>
-                  <p class="project__description--para">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Consequatur cupiditate officia minima ducimus dolorem natus
-                    dolorum aliquid, omnis labore. Dicta ducimus harum quibusdam
-                    deserunt iure quos corporis odio perspiciatis aliquid?
-                  </p>
-                  <div class="project__description--links">
-                    <a href="#" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="project__description--link">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img
-                  src="./assets/blinker mockup.png"
-                  class="project__img"
-                  alt=""
-                />
-                <div class="project__wrapper--bg"></div>
-                <div class="project__description">
-                  <h3 class="project__description--title">Web Scraper</h3>
-                  <h4 class="project__description--sub-title">
-                    Html, CSS, JavaScript, Vue, VueX
-                  </h4>
-                  <p class="project__description--para">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Consequatur cupiditate officia minima ducimus dolorem natus
-                    dolorum aliquid, omnis labore. Dicta ducimus harum quibusdam
-                    deserunt iure quos corporis odio perspiciatis aliquid?
-                  </p>
-                  <div class="project__description--links">
-                    <a href="#" class="project__description--link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="project__description--link">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img
-                  src="./assets/blinker mockup.png"
+                  src="./assets/projectsImages/blinker mockup.png"
                   class="project__img"
                   alt=""
                 />
