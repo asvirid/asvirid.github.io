@@ -1,11 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@100;300;400;700;900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;300;600;700&family=Source+Code+Pro:wght@200;300;400;700&display=swap");
+/* Define custom properties */
+:root {
+  --main-font: "Roboto", sans-serif;
+  --primary-bg-color: #0f172a;
+  --secondary-bg-color: #242424;
+  --accent-color: #1ec987de;
+  --text-color: #e2e8f0;
+  --border-color: #c0c4cc;
+  --hover-border-color: #dcdfe6;
+  --focus-border-color: #f2735b;
+  --scale-factor: 1.1;
+  --modal-bg-light: #f9f9f9;
+  --modal-bg-dark: #242424;
+  --button-bg: #f2735b;
+  --button-text: white;
+  --scroll-icon-border: #e2e8f0;
+  --scroll-icon-bg: #192442;
+  --footer-bg: #0f172a;
+  --shape-bg: #1c1d25;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--main-font);
 }
 
 html {
@@ -30,7 +51,7 @@ button {
 }
 
 section {
-  background-color: #07142b;
+  background-color: var(--primary-bg-color);
   transition: all 300ms ease;
   z-index: 100;
 }
@@ -38,10 +59,10 @@ section {
 input,
 textarea {
   width: 100%;
-  background-color: #242424;
+  background-color: var(--secondary-bg-color);
   color: white;
   outline: none;
-  border: 1px solid #c0c4cc;
+  border: 1px solid var(--border-color);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -62,12 +83,12 @@ label {
 
 input:hover,
 textarea:hover {
-  border-color: #dcdfe6;
+  border-color: var(--hover-border-color);
 }
 
 input:focus,
 textarea:focus {
-  border-color: #f2735b;
+  border-color: var(--focus-border-color);
 }
 
 .container {
@@ -81,12 +102,14 @@ textarea:focus {
   margin: 0 auto;
   padding: 0 12px;
 }
+
 .click {
   cursor: pointer;
   transition: all 300ms ease;
 }
+
 .click:hover {
-  transform: scale(1.1);
+  transform: scale(var(--scale-factor));
 }
 
 .click:active {
@@ -94,7 +117,7 @@ textarea:focus {
 }
 
 .title {
-  color: #fff;
+  color: var(--text-color);
   font-size: 46px;
   margin-bottom: 12px;
   text-align: left;
@@ -102,15 +125,16 @@ textarea:focus {
 }
 
 .orange__title {
-  color: #e7f8ead3;
+  color: var(--text-color);
 }
+
 .orange {
-  color: #1ec987de;
+  color: var(--accent-color);
   font-family: Source Code Pro;
 }
 
 .h2 {
-  color: #1ec988;
+  color: var(--accent-color);
   font-family: Source Code Pro;
   font-size: 16px;
   font-weight: 400;
@@ -135,10 +159,11 @@ textarea:focus {
 }
 
 .link__hover-effect--white:after {
-  background-color: #fff;
+  background-color: var(--text-color);
 }
+
 .link__hover-effect--black:after {
-  background-color: #fff;
+  background-color: var(--text-color);
 }
 
 .link__hover-effect:hover::after {
@@ -155,7 +180,7 @@ nav,
   z-index: 100;
 }
 
-/*Hiding elements when contact form is open*/
+/* Hiding elements when the contact form is open */
 .modal--open nav,
 .modal--open .scroll,
 .modal--open .header {
@@ -177,7 +202,7 @@ nav,
 }
 
 .light-theme section {
-  background-color: #f9f9f9;
+  background-color: #e2e8f0;
 }
 
 .light-theme #personal-logo {
@@ -187,28 +212,27 @@ nav,
 .light-theme .scroll__icon {
   border-color: #192442;
 }
+
 .light-theme .scroll__icon:after,
 .light-theme .link__hover-effect--black:after {
-  background-color: #192442;
+  background-color: var(--text-color);
 }
 
 .light-theme .mail__btn {
   background-color: #192442;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .light-theme footer {
-  background-color: #f9f9f9;
+  background-color: #e2e8f0;
 }
-/*
 
-NAVIGATION
-
-*/
+/* NAVIGATION */
 
 #personal-logo {
-  width: 110px;
-  height: 90px;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 nav {
@@ -234,7 +258,7 @@ nav {
   text-decoration: none;
   font-family: Source Code Pro;
   font-size: 16px;
-  color: rgba(245, 245, 245, 0.819);
+  color: var(--text-color);
   font-weight: 700;
 }
 
@@ -242,11 +266,7 @@ nav {
   font-size: 20;
 }
 
-/*
-
-LANDING PAGE
-
-*/
+/* LANDING PAGE */
 
 #landing-page {
   min-height: 100vh;
@@ -263,10 +283,10 @@ LANDING PAGE
 }
 
 .header__para {
-  color: #fff;
+  color: #94a3b8;
   font-family: Source Code Pro;
   font-size: 16px;
-  font-weight: 120;
+  font-weight: 200;
   line-height: 26px;
   letter-spacing: 0em;
   max-width: 550px;
@@ -279,7 +299,7 @@ LANDING PAGE
 
 .social__link {
   background-color: #1ec988;
-  color: white;
+  color: var(--text-color);
   padding: 6px;
   width: 32px;
   height: 32px;
@@ -297,7 +317,7 @@ LANDING PAGE
   font-size: 32px;
   border-radius: 50%;
   border: none;
-  background-color: #f9f9f9;
+  background-color: var(--text-color);
   color: #192442;
   position: fixed;
   bottom: 32px;
@@ -316,7 +336,7 @@ LANDING PAGE
 .scroll__icon {
   width: 20px;
   height: 30px;
-  border: 2px solid #fff;
+  border: 2px solid var(--scroll-icon-border);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -327,7 +347,7 @@ LANDING PAGE
   content: "";
   width: 4px;
   height: 6px;
-  background-color: #fff;
+  background-color: var(--scroll-icon-border);
   border-radius: 2px;
   animation: scroll 1000ms infinite alternate-reverse;
 }
@@ -384,7 +404,7 @@ MODAL
   transform: translateX(0%);
 }
 .modal__about {
-  background-color: #f9f9f9;
+  background-color: var(--modal-bg-light);
   transform: translateX(-110%);
 }
 
@@ -415,7 +435,7 @@ MODAL
 
 .language__name {
   position: absolute;
-  color: #242424;
+  color: var(--secondary-bg-color);
   bottom: -10px;
   transform: scale(0);
   transition: all 300ms ease;
@@ -425,7 +445,7 @@ MODAL
   width: 100%;
 }
 .modal__contact {
-  background-color: #242424;
+  background-color: var(--modal-bg-dark);
   color: white;
   transform: translateX(110%);
 }
@@ -449,9 +469,9 @@ MODAL
 }
 
 .form__submit {
-  background-color: #f2735b;
-  border: 2px solid #f2735b;
-  color: white;
+  background-color: var(--button-bg);
+  border: 2px solid var(--button-bg);
+  color: var(--button-text);
   font-weight: 700;
   width: 100%;
   max-width: 240px;
@@ -460,13 +480,13 @@ MODAL
   transition: all 300ms ease;
 }
 .form__submit:hover {
-  border-color: #fff;
+  border-color: var(--text-color);
   background-color: transparent;
 }
 
 .form__submit:active {
-  border-color: #f2735b;
-  color: #f2735b;
+  border-color: var(--button-bg);
+  color: var(--button-bg);
 }
 .modal__overlay {
   position: absolute;
@@ -481,7 +501,7 @@ MODAL
 }
 
 .modal__overlay--loading {
-  background-color: #242424;
+  background-color: var(--modal-bg-dark);
   font-size: 80px;
 }
 
@@ -515,15 +535,12 @@ MODAL
   position: absolute;
   top: 30px;
   right: 40px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 36px;
   z-index: 100;
 }
-/*
 
-PROJECTS
-
-*/
+/* PROJECTS */
 
 .section__title {
   color: rgba(245, 245, 245, 0.821);
@@ -562,7 +579,7 @@ PROJECTS
   margin-bottom: 100px;
 }
 
-/*slide up effect*/
+/* slide up effect */
 .project__wrapper:hover .project__description {
   opacity: 1;
   transform: translateY(-50%);
@@ -595,7 +612,7 @@ PROJECTS
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1c1d25;
+  background-color: var(--shape-bg);
   opacity: 0;
   transition: all 450ms ease;
 }
@@ -614,6 +631,7 @@ PROJECTS
   font-size: 20px;
   margin-right: 16px;
 }
+
 .project__description--para {
   font-size: 14px;
   font-weight: 280;
@@ -621,14 +639,10 @@ PROJECTS
   padding-bottom: 10px;
 }
 
-/*
-
-FOOTER
-
-*/
+/* FOOTER */
 
 footer {
-  background-color: #07142b;
+  background-color: var(--footer-bg);
   display: flex;
   padding: 3% 0;
   position: relative;
@@ -644,6 +658,7 @@ footer {
 .footer__logo--img {
   width: 120px;
 }
+
 .footer__social--list {
   width: 100%;
   max-width: 500px;
@@ -651,6 +666,7 @@ footer {
   justify-content: space-around;
   margin: 20px 0;
 }
+
 .footer__social--link,
 .footer__copyright {
   color: white;
@@ -661,11 +677,7 @@ footer {
   font-size: 12px;
 }
 
-/*
-
-SHAPES
-
-*/
+/* SHAPES */
 
 .shape {
   position: fixed;
@@ -716,7 +728,7 @@ SHAPES
   left: 80vw;
 }
 
-/*phones, tablets etc*/
+/* phones, tablets, etc */
 @media (max-width: 768px) {
   .title {
     font-size: 64px;
