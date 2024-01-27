@@ -6,13 +6,14 @@
   --main-font: "Roboto", sans-serif;
   --primary-bg-color: #0f172a;
   --secondary-bg-color: #242424;
-  --accent-color: #1ec987de;
+  --accent-color: #1ec9878c;
+  --accent-color2: #1fb47bbd;
   --text-color: #e2e8f0;
   --border-color: #c0c4cc;
   --hover-border-color: #dcdfe6;
   --focus-border-color: #f2735b;
   --scale-factor: 1.1;
-  --modal-bg-light: #f9f9f9;
+  --modal-bg-light: #f9f9f9c6;
   --modal-bg-dark: #242424;
   --button-bg: #f2735b;
   --button-text: white;
@@ -129,7 +130,7 @@ textarea:focus {
 }
 
 .orange {
-  color: var(--accent-color);
+  color: var(--accent-color2);
   font-family: Source Code Pro;
 }
 
@@ -191,6 +192,8 @@ nav,
 
 .light-theme .title,
 .light-theme .h2,
+.light-theme .project__description--title,
+.light-theme .project__description--para,
 .light-theme .section__title,
 .light-theme .section__sub-title,
 .light-theme .nav__link--anchor,
@@ -555,20 +558,30 @@ MODAL
 .project__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
 .project {
-  width: 50%;
-  padding: 16px;
+  width: 72%;
+  padding: 5px;
+  height: 180px;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .project__img {
   width: 100%;
-  height: 300px;
+  height: 180px;
   opacity: 0.85;
   transition: transform 600ms ease;
+}
+
+.project__text {
+  flex-basis: 65%;
+  max-width: 65%;
+  padding-left: 20px;
 }
 
 .project__wrapper {
@@ -576,7 +589,9 @@ MODAL
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  flex-basis: 35%;
+  max-width: 35%;
 }
 
 /* slide up effect */
@@ -619,17 +634,24 @@ MODAL
 
 .project__description--title {
   font-size: 22px;
+  color: #e7f8ead3;
 }
 
 .project__description--sub-title {
   font-size: 14px;
   margin-top: 8px;
+  color: var(--accent-color);
+  font-family: Source Code Pro;
+  font-weight: 400;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
 }
 
 .project__description--link {
   color: white;
-  font-size: 20px;
-  margin-right: 16px;
+  font-size: 25px;
+  margin-right: 10px;
 }
 
 .project__description--para {
@@ -637,8 +659,8 @@ MODAL
   font-weight: 280;
   margin: 5px 0;
   padding-bottom: 10px;
+  color: #e7f8ead3;
 }
-
 /* FOOTER */
 
 footer {
