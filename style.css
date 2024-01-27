@@ -13,7 +13,7 @@
   --hover-border-color: #dcdfe6;
   --focus-border-color: #f2735b;
   --scale-factor: 1.1;
-  --modal-bg-light: #f9f9f9c6;
+  --modal-bg-light: #f9f9f9e6;
   --modal-bg-dark: #242424;
   --button-bg: #f2735b;
   --button-text: white;
@@ -429,7 +429,7 @@ MODAL
 }
 
 .modal__language {
-  width: 25%;
+  width: 20%;
   padding: 16px;
   position: relative;
   display: flex;
@@ -448,8 +448,9 @@ MODAL
 }
 
 .language__name {
+  font-size: 14px;
   position: absolute;
-  color: var(--secondary-bg-color);
+  color: gray;
   bottom: -10px;
   transform: scale(0);
   transition: all 300ms ease;
